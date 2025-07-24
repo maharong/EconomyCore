@@ -1,0 +1,45 @@
+prefix:
+  plugin: "[ <yellow>EconomyCore</yellow> ]"
+  money: "[ <green>돈</green> ]"
+prefix-skip:
+  money:
+    - money.rank.header
+    - money.rank.entry
+    - money.rank.prev
+    - money.rank.next
+
+plugin:
+  version: "<green>EconomyCore 플러그인 버전: <yellow>{version}"
+  usage: "<red>사용법: /ecore <version | reload>"
+  reloading: "<gold>플러그인 리로드 중입니다..."
+  reloaded: "<green>플러그인 리로드가 완료되었습니다!"
+
+money:
+  self: "<green>당신의 보유 금액: <yellow>{amount}원"
+  other: "<green>{player}님의 보유 금액: <yellow>{amount}원"
+  not-found: "<red>해당 플레이어를 찾을 수 없습니다."
+  never-joined: "<red>해당 플레이어는 서버에 접속한 적이 없습니다."
+  usage: "<red>사용법: /돈 <닉네임> | /money <target>"
+  usage.give: "<red>/돈 지급 <닉네임> <금액> | /money give <target> <amount>"
+  usage.take: "<red>/돈 차감 <닉네임> <금액> | /money take <target> <amount>"
+  usage.pay: "<red>/돈 송금 <닉네임> <금액> | /money pay <target> <amount>"
+  usage.set: "<red>/돈 설정 <닉네임> <금액> | /money set <target> <amount>"
+  usage.reset: "<red>/돈 초기화 <닉네임> | /money reset <target>"
+  no-permission: "<red>해당 명령어를 사용할 권한이 없습니다."
+  invalid-amount: "<red>숫자가 아니거나 0 이상의 숫자가 아닙니다."
+  given: "<green>{player}님에게 <yellow>{amount}원</yellow>를 지급했습니다."
+  taken: "<red>{player}님에게서 <yellow>{amount}원</yellow>를 차감했습니다."
+  set: "<yellow>{player}</yellow>님의 보유 금액을 <yellow>{amount}원</yellow>으로 설정했습니다."
+  sent: "<green>{target}님에게 <yellow>{amount}원</yellow>을 송금했습니다."
+  received: "<aqua>{sender}님으로부터 <yellow>{amount}원</yellow>을 송금받았습니다."
+  insufficient: "<red>잔액이 부족합니다."
+  reset: "<yellow>{player}</yellow>님의 보유 금액을 초기화하였습니다."
+  unknown-subcommand: "<red>알 수 없는 서브 명령어입니다."
+  console-only: "<red>이 명령어는 콘솔에서는 사용할 수 없습니다."
+  rank:
+    header: "<gold>[ 돈 순위 {page} / {total_pages} ]"
+    entry: "<white>{rank}위: <green>{name}</green> - <yellow>{amount}원"
+    prev: "<click:run_command:'/돈 순위 {prev_page}'><aqua>이전</aqua></click>"
+    next: "<click:run_command:'/돈 순위 {next_page}'><aqua>다음</aqua></click>"
+    not-found: "<red>해당 닉네임의 플레이어 정보를 찾을 수 없습니다."
+    personal: "<yellow>{name}</yellow>님의 순위는 <yellow>{rank}위</yellow>, 보유 금액은 <gold>{amount}</gold>원입니다."
